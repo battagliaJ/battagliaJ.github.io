@@ -16,7 +16,7 @@ button {top: 3%; left: 10%;}
     transition: all 1s;
     text-decoration: none;
     font-size: 1em;
-    opacity: .5%;
+    opacity: .9;
 }
 
 #back:hover {
