@@ -25,12 +25,22 @@ function setup() {
     highscore = 0;
     theHighscore = document.getElementById("highscore").innerHTML= "Highscore: " + highscore;
     reset = true;
-    SPEED = 3;
+    SPEED = 3;   
+    setInterval(
+        function() {
+            checkScore = document.getElementById("score").innerHTML;
+            checkScoreArray = [].slice.call(checkScore);
+            if (checkScoreArray[7,checkScoreArray.length-1]+10 < this.score) {
+                console.log('No Cheating fam')
+                circle.UpdateScore(-this.score);
+            }
+            
+            }, 100);
 }
 
 function draw() {
     score = circle.UpdateScore();
-    document.getElementById("score").innerHTML= "Score: " + score;
+    document.getElementById("score").innerHTML = "Score: " + score;
     if (score % 50 == 0 && score != 0 && reset) {
         circle.size[0] = 30;
         circle.size[1] = 30;
@@ -78,6 +88,8 @@ function draw() {
                 circle.size[0] += (sizeIncrease);
                 circle.size[1] += (sizeIncrease);
                 score = circle.UpdateScore(1);
+                enemys[j].xspeed = random(-4,4);
+                enemys[j].yspeed = random(-2,4);
 
             } else {
                 gameOver = true;
@@ -249,7 +261,6 @@ function keyReleased() {
     }
 }
 
-
 function Circle() {
     this.x = width/2;
     this.y = height/2;
@@ -259,7 +270,7 @@ function Circle() {
     this.score = 0;
     changeRed = false;
 
-    this.UpdateScore = function (addToScore = 0) {
+    this.UpdateScore = function (addToScore=0) {
         this.score += addToScore;
         return this.score;
     }
