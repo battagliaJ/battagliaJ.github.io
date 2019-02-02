@@ -72,3 +72,9 @@ button:hover {
 button:focus {
     outline: none;
 }
+
+audio {
+    position: fixed;
+    left:3px;
+    height: 20px;
+}
