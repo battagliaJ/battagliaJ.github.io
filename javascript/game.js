@@ -26,7 +26,7 @@ function setup() {
     theHighscore = document.getElementById("highscore").innerHTML= "Highscore: " + highscore;
     reset = true;
     SPEED = 3;   
-    setInterval(
+    /*setInterval(
         function() {
             checkScore = document.getElementById("score").innerHTML;
             checkScoreArray = [].slice.call(checkScore);
@@ -35,7 +35,7 @@ function setup() {
                 circle.UpdateScore(-this.score);
             }
             
-            }, 100);
+            }, 100);*/
 }
 
 function draw() {
