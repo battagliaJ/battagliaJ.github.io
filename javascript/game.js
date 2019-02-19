@@ -1,5 +1,10 @@
 /*CREATED BY JUSTIN BATTAGLIA*/
-
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
 function setup() {
     var cnv = createCanvas(windowWidth-100, windowHeight-120);
     /*drawingContext.shadowColor = '#444';
