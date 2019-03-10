@@ -8,6 +8,13 @@
     z-index: -1000;
     transform: rotate(110deg);
 }
+html {
+   background-color:white; 
+}
+body {
+    background-color:white;
+}
+
 
 #back {
     padding:0;
