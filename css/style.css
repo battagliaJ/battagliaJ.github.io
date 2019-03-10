@@ -1,4 +1,4 @@
-/*#background {
+#background {
     position: fixed;
     top: 0px;
     left: 30px;
@@ -7,7 +7,7 @@
     background-color: #333;
     z-index: -1000;
     transform: rotate(110deg);
-}*/
+}
 
 #back {
     padding:0;
